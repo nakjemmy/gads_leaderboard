@@ -90,14 +90,14 @@ class ProjectSubmissionActivity : AppCompatActivity(),
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     submitProjectDialogFragment.dismiss()
-                    Thread.sleep(1500)
+                    Thread.sleep(500)
                     showSuccessDialog()
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 submitProjectDialogFragment.dismiss()
-                Thread.sleep(1500)
+                Thread.sleep(500)
                 showErrorDialog()
             }
 
